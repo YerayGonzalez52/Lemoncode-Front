@@ -1,0 +1,39 @@
+body{
+    background-color: gray;
+}
+
+.grid-container{
+    display: grid;
+    width: 20vw;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.grid-container .content{
+    padding: 10px;
+}
+
+.grid-container h1{
+    font-weight: 100;
+}
+
+.grid-container img{
+    width: 100%;
+}
+
+.grid-container button{
+    color: white;
+    background-color: rgb(0, 160, 0);
+    border: none;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.grid-container :nth-child(3) {
+  text-align: right;
+}
+
+.grid-container span:nth-child(1) {
+  color: rgb(0, 160, 0);
+}

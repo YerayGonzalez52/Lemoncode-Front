@@ -1,0 +1,44 @@
+@use "sass:color";
+
+body {
+  background-color: aquamarine;
+}
+
+$red-base: #e74c3c;
+$blue-base: #2980b9;
+$green-base: #27ae60;
+
+@mixin color-palette($color-base, $prefix) {
+  @for $i from 1 through 4 {
+    .#{$prefix}darken-#{$i} {
+      background-color: color.adjust($color-base, $lightness: -$i * 5%);
+      color: color.adjust($color-base, $lightness: 10% - $i * 25%);
+    }
+  }
+  .#{$prefix}base-color {
+    background-color: $color-base;
+    color: color.adjust($color-base, $lightness: 95%);
+  }
+  @for $i from 1 through 4 {
+    .#{$prefix}lighten-#{$i} {
+      background-color: color.adjust($color-base, $lightness: $i * 5%);
+      color: color.adjust($color-base, $lightness: 10% + $i * 12%);
+    }
+  }
+}
+
+@include color-palette($red-base, "red-");
+@include color-palette($blue-base, "blue-");
+@include color-palette($green-base, "green-");
+
+.box {
+  width: 90px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 3px 0 0;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+}
