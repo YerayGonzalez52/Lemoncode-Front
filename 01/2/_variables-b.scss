@@ -1,0 +1,19 @@
+$color-principal: #1226da;
+$color-secundario: #00154e;
+$color-terciario: #62abff;
+$sombra: 21px 23px 18px 0px rgba(0,0,0,0.75);
+$fuente-principal: helvetica;
+$fuente-secundaria: impact;
+$borde: 6px;
+
+
+:root {
+  --color-principal: #{$color-principal};
+  --color-secundario: #{$color-secundario};
+  --color-terciario: #{$color-terciario};
+  --sombra: #{$sombra};
+  --fuente-principal: #{$fuente-principal};
+  --fuente-secundaria: #{$fuente-secundaria};
+  --borde: #{$borde};
+}
+
