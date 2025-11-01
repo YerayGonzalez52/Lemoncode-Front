@@ -1,7 +1,7 @@
 .page-container{
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 50px;
     grid-template-areas:
     "header header"
     "nav main"
@@ -12,6 +12,7 @@
 
 header{
     grid-area: header;
+    background-color: rgb(205, 223, 27);
 }
 
 nav{
@@ -29,6 +30,8 @@ main {
 
 footer{
     grid-area: footer;
+    background-color: rgb(249, 251, 227);
+    align-content: center;
 }
 
 .menu-title{
@@ -38,8 +41,12 @@ footer{
     text-transform: uppercase;
 }
 
-.menu-container ul{
+.menu-container{
+    position: sticky;
+    top: 0px;
+}
 
+.menu-container ul{
     list-style: none;
     padding-left: 0;
     margin: 0;
@@ -56,10 +63,38 @@ footer{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+    background-color: white;
 }
 
 .page-title{
-    padding-top: 50px;
     color: white;
-    background-color: rgb(205, 223, 27);
+    align-content: center;
+    padding-top: 25px;
+    font-size: larger;
+}
+
+.list{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: space-evenly;
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
+
+.card{
+background: #fff;
+  border: 2px solid #888;
+  padding: 24px 8px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 300px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card img{
+    border-radius: 50%;
 }
