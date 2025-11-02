@@ -16,7 +16,7 @@ footer a{
 
 }
 
-footer a.selected {
+footer a:hover {
     background-color: #35404a;
 }
 
