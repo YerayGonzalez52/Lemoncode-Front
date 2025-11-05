@@ -1,5 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     background-color: #141414;
     color: white;
+    font-family: Jost;
 }
 
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas:
+    "header"
+    "main";
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+section {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  flex-wrap: wrap;
+
+  .item {
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    .item {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+
+    .item:hover {
+      transform: scale(1.2);
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+    body{
+    }
+
+    section{
+        justify-content: center;
+    }
+
+    .top > .top-item:nth-last-child(-n+2){
+        display: none;
+    }
+}
