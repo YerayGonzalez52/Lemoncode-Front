@@ -36,7 +36,6 @@ main {
 footer{
     grid-area: footer;
     background-color: rgb(249, 251, 227);
-    align-content: center;
 }
 
 .menu-title{
@@ -68,6 +67,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+    padding-top: 10px;
     background-color: white;
 }
 
@@ -81,60 +81,63 @@ footer{
 .list{
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fit, 200px);
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
     padding-top: 25px;
     padding-bottom: 75px;
 }
 
 .card{
-background: #fff;
   border: 2px solid #888;
   padding: 24px 8px 12px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  max-width: 300px;
+  width: 300px;
+  height: 200px;
   border-radius: 4px;
   text-align: center;
 }
 
 .card img{
     border-radius: 50%;
+    width: 130px;
+}
+
+.member-name{
+    font-size: large;
 }
 
 @media (max-width: 768px){
     html, body{
-        
+        min-height: 100vh;
+        height: auto;
     }
 
     .page-container {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "nav"
-      "main"
-      "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
+        min-height: 100vh;
+        height: auto;   
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
     }
 
     .toolbar{
         display: none;
     }
 
-
-
     nav{
+        position: sticky;
+        top: 0;
         width: 100%;
     }
     
-    .menu-container{
-        position: sticky;
-        top: 0px;
-        z-index: 10;
-    }
 
     .menu-title{
         display: none;
@@ -169,8 +172,9 @@ background: #fff;
     .card{
         flex-direction: row;
         border: none;
-        max-width: 95%;
-        gap: 15px;
+        gap: 30px;
+        background-color: white;
+        width: 95vw;
     }
 
     footer{
